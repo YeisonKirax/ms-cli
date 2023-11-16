@@ -23,6 +23,7 @@ builds:
       - darwin
 
 archives:
+  - id: "templates"
   - files:
       - pkg/templates/**/*
   - format: tar.gz
