@@ -1,5 +1,5 @@
 build:
-	go build -o bin/brmscli
+	go build -o bin/mscli
 run:
 	./bin/brmscli
 dev:

@@ -1,8 +1,8 @@
-// Package cmd /*
+// Package create /*
 package cmd
 
 import (
-	"fmt"
+	"ms-cli/pkg/commands/create"
 
 	"github.com/spf13/cobra"
 )
@@ -14,12 +14,9 @@ var createCmd = &cobra.Command{
 	Long: `Create a new microservice using the languages and templates predefined. Additionally, 
 generate a base structure.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("create called")
+		create.CreateMicroservice()
 	},
 }
-var name string
-var language string
-var msType string
 
 func init() {
 	rootCmd.AddCommand(createCmd)
@@ -32,5 +29,4 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// createCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-	createCmd.PersistentFlags().StringVarP(&name, "name", "n", "", "Set the name of the microservice.")
 }
